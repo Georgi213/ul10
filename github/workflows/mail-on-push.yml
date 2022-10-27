@@ -1,6 +1,0 @@
-jobs:
-  mail_on_push:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Send email
-        uses: dawidd6/action-send-mail@v3

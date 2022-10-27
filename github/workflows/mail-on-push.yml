@@ -1,3 +1,4 @@
+on: [push]
 jobs:
   mail_on_push:
     runs-on: ubuntu-latest
@@ -9,5 +10,7 @@ jobs:
      subject: ${{github.repository}}
      body: ${{github.event.head_commit.message}}
      to: ${{github.event.pusher.name}}
-   
+    steps:
+      - name: Send email
+        uses: dawidd6/action-send-mail@v3
     
